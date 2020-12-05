@@ -1,5 +1,4 @@
-
-  // RANDOM button
+// RANDOM button
   function randombutton(){
           snake2.maxcells = 3;
           snake2.dx = grid;
@@ -385,7 +384,6 @@ toggleFullScreen();
   });
   // start the game
   requestAnimationFrame(loop);
- 
 
   function goFullscreen(id) {
     // Get the element that we want to take into fullscreen mode
