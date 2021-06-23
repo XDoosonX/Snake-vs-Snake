@@ -1,0 +1,53 @@
+ /* This is the button to put in the HTML: 
+ <button name="button" id="FullScreenText" onclick="toggleFullScreen('GameScript'); return false">FullScreen <b>(J)</b></button>
+*/ 
+  
+  function goFullscreen(id) {
+    // Get the element that we want to take into fullscreen mode
+    var element = document.getElementById(id);
+
+    // These function will not exist in the browsers that don't support fullscreen mode yet, 
+    // so we'll have to check to see if they're available before calling them.
+
+    if (element.mozRequestFullScreen) {
+      // This is how to go into fullscren mode in Firefox
+      // Note the "moz" prefix, which is short for Mozilla.
+      element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullScreen) {
+      // This is how to go into fullscreen mode in Chrome and Safari
+      // Both of those browsers are based on the Webkit project, hence the same prefix.
+      element.webkitRequestFullScreen();
+   }
+   // Hooray, now we're in fullscreen mode!
+  }
+
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }
+toggleFullScreenText();  
+}
+
+function toggleFullScreenText() {
+  var x = document.getElementById("FullScreenText");
+  if (x.innerHTML === "Minimize (J)") {
+    x.innerHTML = "Maximize (J)";
+  } else {
+    x.innerHTML = "Minimize (J)";
+  }
+}

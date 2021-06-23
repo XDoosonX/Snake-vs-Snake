@@ -1,0 +1,19 @@
+function Silence (e){
+    var audi = document.getElementsByTagName('audio');
+    for(var i = 0, len = audi.length; i < len;i++){
+        if(audi[i] != -1){
+            audi[i].pause();
+			audi[i].load();
+        }
+    }
+}
+
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+			audios[i].load();
+        }
+    }
+}, true);
