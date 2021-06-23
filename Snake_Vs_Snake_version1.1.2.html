@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Snake vs Snake version 1.1</title>
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./Snake_Vs_Snake_version1.1.2_files/SvS_Style.css">
+
+<style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+   background-image: url(Snake_Vs_Snake_version1.1.2_files/IMGS/BK0.gif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    canvas {
+	  position: fixed;
+      border: 1px dashed white;
+    }
+    </style>
+  </head>
+  <body id="GameScript">
+  <script>
+  var vid = document.getElementById("BGM");
+
+function playVid() {
+    vid.play();
+}
+
+function pauseVid() {
+    vid.pause();
+}
+  </script>
+
+  <audio loop="true" id="Chika" src="Snake_Vs_Snake_version1.1.2_files/Audio/Chika.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="ALA" src="Snake_Vs_Snake_version1.1.2_files/Audio/ALA.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Bunny" src="Snake_Vs_Snake_version1.1.2_files/Audio/AsamiSeto-FukashigiNoCarte.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="ASV" src="Snake_Vs_Snake_version1.1.2_files/Audio/ASV.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Calm" src="Snake_Vs_Snake_version1.1.2_files/Audio/Calm.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Chibi" src="Snake_Vs_Snake_version1.1.2_files/Audio/ChibiKun.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Clueless" src="Snake_Vs_Snake_version1.1.2_files/Audio/Clueless.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Cuddles" src="Snake_Vs_Snake_version1.1.2_files/Audio/Cuddles.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Holliday" src="Snake_Vs_Snake_version1.1.2_files/Audio/Holliday.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="JESL" src="Snake_Vs_Snake_version1.1.2_files/Audio/JESL.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="MET" src="Snake_Vs_Snake_version1.1.2_files/Audio/MET.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="MTTB" src="Snake_Vs_Snake_version1.1.2_files/Audio/MTTB.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="ONB" src="Snake_Vs_Snake_version1.1.2_files/Audio/OsokuNariBaibu.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="PRB" src="Snake_Vs_Snake_version1.1.2_files/Audio/PRBass.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Shure" src="Snake_Vs_Snake_version1.1.2_files/Audio/Shure.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Swift" src="Snake_Vs_Snake_version1.1.2_files/Audio/Swift.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="SLC" src="Snake_Vs_Snake_version1.1.2_files/Audio/SyncLOLcover.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="TheHeat" src="Snake_Vs_Snake_version1.1.2_files/Audio/TheHeat.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="TLAR" src="Snake_Vs_Snake_version1.1.2_files/Audio/TLAR.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="XKproX" src="Snake_Vs_Snake_version1.1.2_files/Audio/XKproX.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="ZSFM" src="Snake_Vs_Snake_version1.1.2_files/Audio/ZSFM.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Magic" src="Snake_Vs_Snake_version1.1.2_files/Audio/Magic.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="Silent" src="Snake_Vs_Snake_version1.1.2_files/Audio/silence.mp3" type="audio/mpeg"></audio>
+  <audio loop="true" id="ELL" src="Snake_Vs_Snake_version1.1.2_files/Audio/ElfenLied-Lilum.mp3" type="audio/mpeg"></audio>
+
+<div class="w3-sidebar" id="sidenav">
+<h2 class="left">BGM</h2>
+<script src="./Snake_Vs_Snake_version1.1.2_files/SingleAudio.js.download"></script>
+<a target="_top" onclick="Silence();">{STOP BGM}</a>
+<a target="_top" onclick="document.getElementById(&#39;ALA&#39;).play();">Ambient Lights</a>
+<a target="_top" onclick="document.getElementById(&#39;Bunny&#39;).play();">Asami Seto- Fukashigi No Carte</a>
+<a target="_top" onclick="document.getElementById(&#39;ASV&#39;).play();">A Soft Voice</a>
+<a target="_top" onclick="document.getElementById(&#39;Calm&#39;).play();">Calm</a>
+<a target="_top" onclick="document.getElementById(&#39;Chibi&#39;).play();">Chibi-Kun 「ちび九ん」</a>
+<a target="_top" onclick="document.getElementById(&#39;Chika&#39;).play();">Kaguya-sama Love Is War- Chika Dance Song</a>
+<a target="_top" onclick="document.getElementById(&#39;Clueless&#39;).play();">Clueless</a>
+<a target="_top" onclick="document.getElementById(&#39;Cuddles&#39;).play();">Cuddles</a>
+<a target="_top" onclick="document.getElementById(&#39;Holliday&#39;).play();">Holliday</a>
+<a target="_top" onclick="document.getElementById(&#39;MTTB&#39;).play();">March To The Beat</a>
+<a target="_top" onclick="document.getElementById(&#39;ONB&#39;).play();">Osoku Nari Baibu 「遅くなりバイブ」</a>
+<a target="_top" onclick="document.getElementById(&#39;PRB&#39;).play();">Preset Remix</a>
+<a target="_top" onclick="document.getElementById(&#39;Shure&#39;).play();">Shure</a>
+<a target="_top" onclick="document.getElementById(&#39;Swift&#39;).play();">Swift</a>
+<a target="_top" onclick="document.getElementById(&#39;SLC&#39;).play();">Lol- Sync (Guitar Playover)</a>
+<a target="_top" onclick="document.getElementById(&#39;TheHeat&#39;).play();">The Heat</a>
+<a target="_top" onclick="document.getElementById(&#39;TLAR&#39;).play();">Shibayan Records- Tiny Little Adiantum(Remix)</a>
+<a target="_top" onclick="document.getElementById(&#39;XKproX&#39;).play();">XKproX</a>
+<a target="_top" onclick="document.getElementById(&#39;ZSFM&#39;).play();">Zack Shuemake's Funeral Music</a>
+<a target="_top" onclick="document.getElementById(&#39;Magic&#39;).play();">Magic</a>
+<a target="_top" onclick="document.getElementById(&#39;ELL&#39;).play();">Elfen Lied- Lilum</a>
+<br>
+      <br><br>
+</div>
+<canvas width="400" height="400" id="game" class="glow"></canvas>
+<script id="Game1" src="./Snake_Vs_Snake_version1.1.2_files/SvS_SourceCode.js.download"></script>
+<script src="./Snake_Vs_Snake_version1.1.2_files/FullScreen.js.download"></script>
+
+<div class="glow" style="position: fixed; top: 15px; border: 2px solid white;">SNAKE VS. SNAKE!!!</div>
+<div id="glow" class="Instructions" style="position: absolute">
+WASD to move the purple snake. Arrow keys to move the red snake. Press "N" to reset the game. Click the board before playing to control the snakes. The goal of the game is to be the first one to get your snake 21 units long. 
+If the head of the snakes collide, both snakes will be reduced to three units and randomly placed on the board. Colliding with yourself will 
+reset the snake. The leading snake (green) will not be able to warp walls and will reset on contact. Updates for this game will be released or posed so be 
+sure to check for newer versions of this game to come. I appreciate your support by playing my game and/or editing my code. <i>(<b>CHALLENGE</b>)</i> control both snakes simultaneously if playing alone. P.S.... Try holding "R"</div>
+<div class="btnHov BtnDiv">    
+<button name="button" value="OK" type="button" onclick="resetbutton()">Reset</button>
+<button name="button" value="OK" type="button" onclick="randombutton()">Random</button>
+<button name="button" id="FullScreenText" onclick="toggleFullScreen(&#39;GameScript&#39;); return false">FullScreen <b>(J)</b></button>
+</div>
+
+
+</body></html>
