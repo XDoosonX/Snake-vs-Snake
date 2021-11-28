@@ -308,7 +308,7 @@
     // left won't do anything, and pressing right while moving left
     // shouldn't let you collide with your own body)
     // left arrow key
-    if (e.which === 76 && snake.dx === 0) {
+    if (e.which === 74 && snake.dx === 0) {
       snake.dx = -grid;
       snake.dy = 0;
     }
@@ -318,7 +318,7 @@
       snake.dx = 0;
     }
     // right arrow key
-    else if (e.which === 74 && snake.dx === 0) {
+    else if (e.which === 76 && snake.dx === 0) {
       snake.dx = grid;
       snake.dy = 0;
     }
