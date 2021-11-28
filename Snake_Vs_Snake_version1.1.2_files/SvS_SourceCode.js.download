@@ -308,42 +308,42 @@
     // left won't do anything, and pressing right while moving left
     // shouldn't let you collide with your own body)
     // left arrow key
-    if (e.which === 37 && snake.dx === 0) {
+    if (e.which === 76 && snake.dx === 0) {
       snake.dx = -grid;
       snake.dy = 0;
     }
     // up arrow key
-    else if (e.which === 38 && snake.dy === 0) {
+    else if (e.which === 73 && snake.dy === 0) {
       snake.dy = -grid;
       snake.dx = 0;
     }
     // right arrow key
-    else if (e.which === 39 && snake.dx === 0) {
+    else if (e.which === 74 && snake.dx === 0) {
       snake.dx = grid;
       snake.dy = 0;
     }
-    // down arrow key
+    // down s
     else if (e.which === 83 && snake2.dy === 0) {
       snake2.dy = grid;
       snake2.dx = 0;
     }
-    // left arrow key
+    // left a
     else if (e.which === 65 && snake2.dx === 0) {
       snake2.dx = -grid;
       snake2.dy = 0;
     }
-    // up arrow key
+    // up w
     else if (e.which === 87 && snake2.dy === 0) {
       snake2.dy = -grid;
       snake2.dx = 0;
     }
-    // right arrow key
+    // right d
     else if (e.which === 68 && snake2.dx === 0) {
       snake2.dx = grid;
       snake2.dy = 0;
     }
     // down arrow key
-    else if (e.which === 40 && snake.dy === 0) {
+    else if (e.which === 75 && snake.dy === 0) {
       snake.dy = grid;
       snake.dx = 0;
     }
