@@ -377,8 +377,8 @@
     snake.x = getRandomInt(0, 25) * grid;
           snake.y = getRandomInt(0, 25) * grid; 
    }
-// Fullscreen button.
-else if (e.which === 74){
+// Fullscreen button. (f)
+else if (e.which === 70){
 toggleFullScreen();
 }
   });
