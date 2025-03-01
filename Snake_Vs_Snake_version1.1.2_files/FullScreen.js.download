@@ -1,5 +1,5 @@
  /* This is the button to put in the HTML: 
- <button name="button" id="FullScreenText" onclick="toggleFullScreen('GameScript'); return false">FullScreen <b>(J)</b></button>
+ <button name="button" id="FullScreenText" onclick="toggleFullScreen('GameScript'); return false">FullScreen <b>(F)</b></button>
 */ 
   
   function goFullscreen(id) {
@@ -45,9 +45,9 @@ toggleFullScreenText();
 
 function toggleFullScreenText() {
   var x = document.getElementById("FullScreenText");
-  if (x.innerHTML === "Minimize (J)") {
-    x.innerHTML = "Maximize (J)";
+  if (x.innerHTML === "Minimize (F)") {
+    x.innerHTML = "Maximize (F)";
   } else {
-    x.innerHTML = "Minimize (J)";
+    x.innerHTML = "Minimize (F)";
   }
 }
